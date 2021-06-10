@@ -52,18 +52,18 @@ const Navbar = () => {
                 <NavLinks to="/">Start</NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/services">Aktywność</NavLinks>
+                <NavLinks to="/aktywnosc">Aktywność</NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/products">Życiorys</NavLinks>
+                <NavLinks to="/zyciorys">Życiorys</NavLinks>
               </NavItem>
               <NavItemBtn>
                 {button ? (
-                  <NavBtnLink to="/sign-up">
+                  <NavBtnLink to="/uczony">
                     <Button primary>Uczony</Button>
                   </NavBtnLink>
                 ) : (
-                  <NavBtnLink to="/sign-up">
+                  <NavBtnLink to="/uczony">
                     <Button fontBig primary>
                       Uczony
                     </Button>
