@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Modal from "../portal/Modal";
 
 import {
   InfoSec,
@@ -32,6 +33,9 @@ const InfoSection = ({
   alt,
   start,
 }) => {
+  const [modal, setModal] = useState(false);
+  const Toggle = () => setModal(!modal);
+
   return (
     <>
       <InfoSec lightBg={lightBg}>
@@ -42,15 +46,40 @@ const InfoSection = ({
                 <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headLine}</Heading>
                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
-                <Link
+                {/* <Link
                   to="//pl.wikipedia.org/wiki/Michał_Heller"
                   target="_blank"
                   rel="noopener noreferrer"
+                > */}
+                <Button big fontBig primary={primary} onClick={() => Toggle()}>
+                  {buttonLabel}
+                </Button>
+                <Modal
+                  show={modal}
+                  close={Toggle}
+                  title="Krytyka nowego ateizmu"
                 >
-                  <Button big fontBig primary={primary}>
-                    {buttonLabel}
-                  </Button>
-                </Link>
+                  <p>
+                    W latach 90. Heller gościł w programie BBC Heart of the
+                    Matter (ang. Sedno sprawy). Odcinek God under the microscope
+                    (Bóg pod mikroskopem) był na temat relacji nauki i wiary, a
+                    jednym z uczestników dyskusji był Richard Dawkins. Dawkins
+                    uważa religię za zjawisko przestarzałe. Jego zdaniem nauka
+                    zgromadziła już wystarczająco dużo wiedzy, żeby odrzucić
+                    chrześcijańskie credo oraz uznać teologiczne wyjaśnienia za
+                    zbędne. Później, na początku XXI w., Dawkins rozpoczął
+                    aktywną kampanię na rzecz promocji ateizmu i krytyki religii
+                    – tzw. nowy ateizm. Krytykuje działalność Fundacji
+                    Templetona, której Michał Heller oraz Centrum Kopernika są
+                    beneficjentami. Dawkins i jego sojusznicy uważają Nagrodę
+                    Templetona za akt korupcji ...
+                  </p>
+                  <br />
+                  <p>
+                    <em>pl.wikipedia.org/wiki/Michał_Heller</em>
+                  </p>
+                </Modal>
+                {/* </Link> */}
               </TextWrapper>
             </InfoColumn>
             <InfoColumn>

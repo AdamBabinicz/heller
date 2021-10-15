@@ -15,7 +15,7 @@ export const homeObjOne = {
   imgStart: "",
   lightTopLine: true,
   lightTextDesc: true,
-  buttonLabel: "Zobacz więcej",
+  buttonLabel: " więcej",
   description:
     "Michał Heller popularyzował w licznych dziełach oraz wystąpieniach odkrycia i hipotezy współczesnej kosmologii. Poruszał zarówno zagadnienia teoretyczne, nad którymi sam pracuje, jak i napływające wciąż dane obserwacyjne. Zwraca uwagę na historyczny rozwój kosmologii, upadek teorii stanu stacjonarnego i ostateczne potwierdzenie Wielkiego Wybuchu przez obserwacje astronomiczne. Pisze też o społeczno-kulturowych aspektach kosmologii. Uważa ją za jedno z największych osiągnięć XX wieku.",
   headLine: "Polski prezbiter katolicki, teolog, profesor nauk filozoficznych.",
