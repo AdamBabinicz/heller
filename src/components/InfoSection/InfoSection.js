@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Modal from "../portal/Modal";
+import Modal1 from "../portal/Modal";
 
 import {
   InfoSec,
@@ -46,6 +46,7 @@ const InfoSection = ({
                 <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headLine}</Heading>
                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
+                <Subtitle lightTextDesc={lightTextDesc}>{modal}</Subtitle>
                 {/* <Link
                   to="//pl.wikipedia.org/wiki/Michał_Heller"
                   target="_blank"
@@ -54,7 +55,7 @@ const InfoSection = ({
                 <Button big fontBig primary={primary} onClick={() => Toggle()}>
                   {buttonLabel}
                 </Button>
-                <Modal
+                <Modal1
                   show={modal}
                   close={Toggle}
                   title="Krytyka nowego ateizmu"
@@ -78,7 +79,8 @@ const InfoSection = ({
                   <p>
                     <em>pl.wikipedia.org/wiki/Michał_Heller</em>
                   </p>
-                </Modal>
+                </Modal1>
+
                 {/* </Link> */}
               </TextWrapper>
             </InfoColumn>
